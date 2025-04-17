@@ -1,22 +1,32 @@
-function handleCTAClick() {
-  const modal = document.createElement("div");
-  modal.innerHTML = `
-    <div style="position:fixed;top:0;left:0;width:100%;height:100%;
-    background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;z-index:1000;">
-      <div style="background:white;padding:2rem 3rem;border-radius:16px;text-align:center;">
-        <h2 style="color:#ff4081;">Thanks for reaching out!</h2>
-        <p>We'll get back to you shortly 😊</p>
-        <button style="margin-top:1rem;padding:0.5rem 1rem;background:#ff69b4;color:white;border:none;border-radius:8px;" onclick="this.closest('div').parentElement.remove()">Close</button>
-      </div>
-    </div>
-  `;
-  document.body.appendChild(modal);
-}
-
-function toggleTheme() {
-  document.body.classList.toggle("dark");
-}
+document.getElementById("mode-toggle").addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
 
 window.addEventListener("load", () => {
-  document.querySelector(".loader").style.display = "none";
+  gsap.from(".hero-text h2", { y: -50, opacity: 0, duration: 1 });
+  gsap.from(".hero-text p", { y: -30, opacity: 0, duration: 1, delay: 0.3 });
+  gsap.from(".cta-button", { scale: 0, opacity: 0, duration: 0.8, delay: 0.6 });
 });
+const cursor = document.createElement('div');
+cursor.classList.add('cursor');
+document.body.appendChild(cursor);
+
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = `${e.pageX - 10}px`;
+    cursor.style.top = `${e.pageY - 10}px`;
+});
+
+const clickableElements = document.querySelectorAll('a, button, .cta-button');
+clickableElements.forEach(element => {
+    element.addEventListener('mouseenter', () => {
+        cursor.classList.add('cursor-enlarge');
+    });
+    element.addEventListener('mouseleave', () => {
+        cursor.classList.remove('cursor-enlarge');
+    });
+});
+// Hide the loader once the page is fully loaded
+window.addEventListener('load', () => {
+  document.querySelector('.loader').style.display = 'none';
+});
+
