@@ -2,67 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HappySkills – Spark Joy in Learning</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Creative UI/UX Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
-  <div class="loader"></div>
-
   <header>
-    <div class="logo">🌈 HappySkills</div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#instagram">Instagram</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="actions">
-      <button class="cta-btn" onclick="handleCTAClick()">Book a Demo</button>
-      <div class="toggle" onclick="toggleTheme()">🌓</div>
-    </div>
+    <h1>Vigashini | Website Designer</h1>
+    <button id="mode-toggle">🌙</button>
   </header>
 
-  <section class="hero">
+  <section class="hero" data-aos="fade-up">
     <div class="hero-text">
-      <h1>Inspiring Young Minds</h1>
-      <p>A joyful space to grow with creativity and confidence.</p>
-      <button class="cta-btn" onclick="handleCTAClick()">Get Started</button>
+      <h2>Crafting Beautiful & Functional Designs</h2>
+      <p>Bringing ideas to life through creativity and usability.</p>
+      <button class="cta-button">See My Work</button>
     </div>
-    <lottie-player class="hero-lottie"
-      src="https://assets4.lottiefiles.com/packages/lf20_m3ixidnq.json"
-      background="transparent" speed="1" loop autoplay>
-    </lottie-player>
+    <img src="illustration.jpg" alt="Design Illustration" class="hero-image" />
   </section>
 
-  <section class="section" id="about">
-    <h2>Why Choose Us?</h2>
-    <p>We design joyful learning journeys. From curiosity to confidence, our approach builds the skills that matter in a bright, welcoming environment for all children.</p>
+  <section class="about" data-aos="fade-right">
+    <h2>Why Choose Me?</h2>
+    <p>I specialize in creating user-centered designs that not only look great but also enhance user experience.</p>
+    <img src="medesign.jpg" alt="Why Me Graphic" class="about-img" />
   </section>
 
-  <section class="section card-section" id="reviews">
+  <section class="reviews" data-aos="fade-up">
     <h2>Google Reviews</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m1!1s0x0:0x0!2m2!1sen!2sus" width="100%" height="250" loading="lazy"></iframe>
+    <iframe src="https://widgets.sociablekit.com/google-reviews/iframe/21305765" width="100%" height="300" frameborder="0"></iframe>
   </section>
 
-  <section class="section card-section" id="instagram">
-    <h2><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="IG" class="icon" />Follow Us on Instagram</h2>
-    <p><a href="https://www.instagram.com/your_handle" target="_blank">@your_handle</a></p>
-    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Cxyz123ABC/" data-instgrm-version="14"></blockquote>
-    <script async src="https://www.instagram.com/embed.js"></script>
-  </section>
+  <section class="instagram" data-aos="fade-up">
+    <h2>
+      <img src="Instagram_icon.jpg" alt="Instagram Logo" class="ig-logo" />
+      Instagram Feed
+    </h2>
+    <div class="instagram-feed">
+      <img src="img1.jpg" alt="Instagram Post 1" />
 
-  <section class="section" id="contact">
-    <h2>Join Our Happy Tribe</h2>
-    <button class="cta-btn" onclick="handleCTAClick()">Book a Demo</button>
+    </div>
   </section>
+  <div class="loader">
+    <div class="spinner"></div>
+</div>
+
+
+  <div class="instagram-login">
+    <a href="https://www.instagram.com/accounts/login/" target="_blank">
+      <button class="login-btn">Login to Instagram</button>
+    </a>
+  </div>
+</section>
+<section class="tools" data-aos="fade-up">
+  <h2>Tools I Use</h2>
+  <div class="tool-logos">
+    <img src="figma.jpg" alt="Figma">
+    <img src="Adobe_XD.jpg" alt="Adobe XD">
+    <img src="sketch.jpg" alt="Sketch">
+    <img src="html.jpg" alt="HTML5">
+    <img src="css3.jpg" alt="CSS3">
+    <img src="javascript.jpg" alt="JavaScript">
+  </div>
+</section>
+
+<a href="#contact" class="sticky-contact">📩 Contact</a>
+
+
 
   <footer>
-    <p>&copy; 2025 HappySkills. Crafted with ❤️ by kids-first thinkers.</p>
+    <p>&copy; 2025 Vigashini. All rights reserved.</p>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
   <script src="script.js"></script>
 </body>
 </html>
